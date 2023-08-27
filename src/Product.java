@@ -73,8 +73,9 @@ public class Product {
             this.brand = brand;
         }
     }
-
-    public String displayInfo(){
+    
+    @Override
+    public String toString(){
         return String.format("%s - %s - %.2f", name, brand, price);
     }
 

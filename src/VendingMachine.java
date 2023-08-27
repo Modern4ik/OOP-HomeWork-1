@@ -20,4 +20,18 @@ public class VendingMachine {
         return null;
     }
 
+
+    public Sandwich getSandwich(String name, String filling){
+        for(Product product : products){
+            if (product instanceof Sandwich){
+                Sandwich sandwich = (Sandwich) product;
+
+                if (sandwich.getName().equals(name) && sandwich.getFilling().equals(filling)){
+                    return sandwich;
+                }
+            }
+        }
+        
+        return null;
+    }
 }
